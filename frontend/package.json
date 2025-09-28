@@ -7,8 +7,13 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "test:unit": "vitest --run src/__tests__/unit",
+    "test:integration": "vitest --run src/__tests__/integration",
+    "test:decorations": "vitest --run --testNamePattern='decoration|emoji|ascii'",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "react": "^18.3.1",
